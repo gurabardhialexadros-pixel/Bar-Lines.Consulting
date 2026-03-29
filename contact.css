@@ -1,0 +1,194 @@
+/* ══════════════════════════════════════
+   CONTACT PAGE
+══════════════════════════════════════ */
+
+.ct-section {
+  background: #fff;
+  min-height: 100vh;
+  padding: 140px 175px 120px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.ct-inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 100px;
+  align-items: start;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.9s ease, transform 0.9s cubic-bezier(.16,1,.3,1);
+}
+.ct-inner.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── LEFT ── */
+.ct-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 20px;
+}
+
+.ct-headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(48px, 5.5vw, 76px);
+  line-height: 0.95;
+  color: #111;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  margin-bottom: 52px;
+}
+.ct-headline-yellow { color: var(--yellow); }
+
+/* Form */
+.ct-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.ct-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.ct-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ct-field-full { grid-column: 1 / -1; }
+.ct-field-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111;
+  letter-spacing: 0.02em;
+}
+.ct-input {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #111;
+  background: #fff;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  padding: 14px 16px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  width: 100%;
+}
+.ct-input::placeholder { color: #bbb; }
+.ct-input:focus { border-color: var(--yellow); }
+.ct-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.ct-submit {
+  display: block;
+  width: 100%;
+  background: var(--yellow);
+  color: #111;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s;
+  margin-top: 8px;
+}
+.ct-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(255,189,89,0.45);
+}
+.ct-submit:active { transform: translateY(0); }
+
+/* Success state */
+.ct-success {
+  display: none;
+  text-align: center;
+  padding: 40px 0;
+}
+.ct-success.visible { display: block; }
+.ct-success-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  color: #111;
+  letter-spacing: 0.01em;
+  margin-bottom: 12px;
+}
+.ct-success-sub {
+  font-size: 15px;
+  font-weight: 300;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* ── RIGHT ── */
+.ct-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-top: 148px;
+}
+.ct-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 28px 0;
+  border-bottom: 1px solid #eee;
+}
+.ct-detail:first-child { border-top: 1px solid #eee; }
+.ct-detail-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #111;
+  transition: background 0.2s, color 0.2s;
+}
+.ct-detail:hover .ct-detail-icon {
+  background: var(--yellow);
+  color: #111;
+}
+.ct-detail-icon svg { width: 18px; height: 18px; }
+.ct-detail-body { display: flex; flex-direction: column; gap: 4px; }
+.ct-detail-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #111;
+}
+.ct-detail-link {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.ct-detail-link:hover { color: var(--yellow); }
+.ct-detail-text {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  .ct-section { padding: 100px 24px 80px; }
+  .ct-inner { grid-template-columns: 1fr; gap: 60px; }
+  .ct-form-row { grid-template-columns: 1fr; }
+  .ct-right { padding-top: 0; }
+}

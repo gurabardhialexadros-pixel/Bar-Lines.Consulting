@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get In Touch — BAR · LINES.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="contact.css">
+</head>
+<body>
+<nav id="navbar">
+  <a href="index.html" class="nav-logo"><span class="light">BAR</span><span class="dot"> - </span><span class="bold">LINES.</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html" style="color:#ffffff!important;text-decoration:none!important;">About</a></li>
+    <li><a href="services.html" style="color:#ffffff!important;text-decoration:none!important;">Services</a></li>
+    <li><a href="techniques.html" style="color:#ffffff!important;text-decoration:none!important;">Techniques We Use</a></li>
+  </ul>
+  <div class="nav-cta-wrap"><a href="contact.html" class="nav-cta">Get in Touch</a></div>
+  <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mob-topbar">
+    <a href="index.html" class="mob-logo"><span class="light">BAR</span><span class="dot"> - </span><span class="bold">LINES.</span></a>
+    <button class="mob-close" id="mobClose" aria-label="Close menu"></button>
+  </div>
+  <ul class="mob-links">
+    <li><a href="about.html" class="mob-link">About</a></li>
+    <li><a href="services.html" class="mob-link">Services</a></li>
+    <li><a href="techniques.html" class="mob-link">Techniques We Use</a></li>
+  </ul>
+  <a href="contact.html" class="mob-cta">Get in Touch</a>
+</div>
+
+<section class="ct-section" id="contact">
+  <div class="ct-inner">
+    <div class="ct-left">
+      <p class="ct-label">Get In Touch</p>
+      <h1 class="ct-headline">Let's build something<br><span class="ct-headline-yellow">amazing together.</span></h1>
+      <form class="ct-form" id="ctForm">
+        <div class="ct-form-row">
+          <div class="ct-field">
+            <label class="ct-field-label" for="firstName">First Name</label>
+            <input class="ct-input" type="text" id="firstName" name="firstName" placeholder="First Name">
+          </div>
+          <div class="ct-field">
+            <label class="ct-field-label" for="lastName">Last Name</label>
+            <input class="ct-input" type="text" id="lastName" name="lastName" placeholder="Last Name">
+          </div>
+        </div>
+        <div class="ct-form-row">
+          <div class="ct-field">
+            <label class="ct-field-label" for="phone">Phone</label>
+            <input class="ct-input" type="tel" id="phone" name="phone" placeholder="Enter Your Phone">
+          </div>
+          <div class="ct-field">
+            <label class="ct-field-label" for="email">Email</label>
+            <input class="ct-input" type="email" id="email" name="email" placeholder="Enter Your Email">
+          </div>
+        </div>
+        <div class="ct-field ct-field-full">
+          <label class="ct-field-label" for="message">Message</label>
+          <textarea class="ct-input ct-textarea" id="message" name="message" placeholder="Tell us about your venue and what you're looking to achieve..."></textarea>
+        </div>
+        <button type="submit" class="ct-submit">Send Message</button>
+      </form>
+    </div>
+    <div class="ct-right">
+      <div class="ct-detail">
+        <div class="ct-detail-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/>
+          </svg>
+        </div>
+        <div class="ct-detail-body">
+          <p class="ct-detail-title">Email Support</p>
+          <a href="mailto:gurabardhialexandros@gmail.com" class="ct-detail-link">gurabardhialexandros@gmail.com</a>
+        </div>
+      </div>
+      <div class="ct-detail">
+        <div class="ct-detail-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/>
+          </svg>
+        </div>
+        <div class="ct-detail-body">
+          <p class="ct-detail-title">Visit Our Office</p>
+          <p class="ct-detail-text">North Acton, Ealing, London,<br>England, W3 6RS</p>
+        </div>
+      </div>
+      <div class="ct-detail">
+        <div class="ct-detail-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="17" r="1"/>
+          </svg>
+        </div>
+        <div class="ct-detail-body">
+          <p class="ct-detail-title">Call Us Directly</p>
+          <a href="tel:+447901897467" class="ct-detail-link">+44 7901 897467</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" id="footer">
+  <div class="footer-top">
+    <span class="footer-tagline-black">Clear Lines.</span>
+    <span class="footer-tagline-grey">Better Bars.</span>
+  </div>
+  <div class="footer-mid">
+    <div class="footer-col">
+      <p class="footer-col-title">Pages</p>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="techniques.html">Techniques we use</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Contacts</p>
+      <a href="mailto:gurabardhialexandros@gmail.com">gurabardhialexandros@gmail.com</a>
+      <a href="tel:+447890187467">+44 78901897467</a>
+    </div>
+    <div class="footer-col footer-col-social">
+      <p class="footer-col-title">Social</p>
+      <a href="#">Instagram</a>
+      <a href="#">Linked-In</a>
+    </div>
+  </div>
+  <div class="footer-lockup" id="footerLockup">
+    <span class="lockup-left">BAR <span class="lockup-dash">—</span></span>
+    <span class="lockup-right">LINES.</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script src="contact.js"></script>
+</body>
+</html>

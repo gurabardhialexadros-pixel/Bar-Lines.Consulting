@@ -117,6 +117,7 @@ nav.scrolled .hamburger span { background: #111; }
 .services-image-wrap { width: 100%; border-radius: 16px; overflow: hidden; background: #222; aspect-ratio: 1302/932; }
 .service-img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; border-radius: 16px; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.4s ease; }
 .service-img.active { opacity: 1; }
+.services-img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; border-radius: 16px; }
 
 /* Desktop service body */
 .service-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; }

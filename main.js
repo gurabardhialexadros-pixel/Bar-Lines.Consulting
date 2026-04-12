@@ -22,15 +22,6 @@ document.querySelectorAll('.service-item').forEach(function(item) {
   });
 });
 
-/* ── SERVICE IMAGE SWAP ── */
-document.querySelectorAll('.service-item[data-img]').forEach(function(item) {
-  item.addEventListener('mouseenter', function() {
-    var idx = item.getAttribute('data-img');
-    document.querySelectorAll('.service-img').forEach(function(img){ img.classList.remove('active'); });
-    var target = document.getElementById('serviceImg' + idx);
-    if (target) target.classList.add('active');
-  });
-});
 
 /* ── WORD FILL ── */
 function updateWordFill(el) {

@@ -46,32 +46,37 @@
     <div class="ct-left">
       <p class="ct-label">Get In Touch</p>
       <h1 class="ct-headline">Let's build something<br><span class="ct-headline-yellow">amazing together.</span></h1>
+      <div data-fs-success class="ct-success">
+        <p class="ct-success-title">Message Sent.</p>
+        <p class="ct-success-sub">Thank you for reaching out. We'll be in touch shortly.</p>
+      </div>
       <form class="ct-form" id="ctForm">
         <div class="ct-form-row">
           <div class="ct-field">
             <label class="ct-field-label" for="firstName">First Name</label>
-            <input class="ct-input" type="text" id="firstName" name="firstName" placeholder="First Name">
+            <input class="ct-input" type="text" id="firstName" name="firstName" placeholder="First Name" data-fs-field>
           </div>
           <div class="ct-field">
             <label class="ct-field-label" for="lastName">Last Name</label>
-            <input class="ct-input" type="text" id="lastName" name="lastName" placeholder="Last Name">
+            <input class="ct-input" type="text" id="lastName" name="lastName" placeholder="Last Name" data-fs-field>
           </div>
         </div>
         <div class="ct-form-row">
           <div class="ct-field">
             <label class="ct-field-label" for="phone">Phone</label>
-            <input class="ct-input" type="tel" id="phone" name="phone" placeholder="Enter Your Phone">
+            <input class="ct-input" type="tel" id="phone" name="phone" placeholder="Enter Your Phone" data-fs-field>
           </div>
           <div class="ct-field">
             <label class="ct-field-label" for="email">Email</label>
-            <input class="ct-input" type="email" id="email" name="email" placeholder="Enter Your Email">
+            <input class="ct-input" type="email" id="email" name="email" placeholder="Enter Your Email" data-fs-field>
           </div>
         </div>
         <div class="ct-field ct-field-full">
           <label class="ct-field-label" for="message">Message</label>
-          <textarea class="ct-input ct-textarea" id="message" name="message" placeholder="Tell us about your venue and what you're looking to achieve..."></textarea>
+          <textarea class="ct-input ct-textarea" id="message" name="message" placeholder="Tell us about your venue and what you're looking to achieve..." data-fs-field></textarea>
         </div>
-        <button type="submit" class="ct-submit">Send Message</button>
+        <span data-fs-error class="ct-form-error"></span>
+        <button type="submit" class="ct-submit" data-fs-submit-btn>Send Message</button>
       </form>
     </div>
     <div class="ct-right">
@@ -143,5 +148,10 @@
 
 <script src="main.js"></script>
 <script src="contact.js"></script>
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#ctForm', formId: 'xojyaneg' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
